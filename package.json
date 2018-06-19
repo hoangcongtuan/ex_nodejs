@@ -1,0 +1,21 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "package list for app",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "not now"
+  },
+  "keywords": [
+    "??"
+  ],
+  "author": "Tuan Hoang",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
