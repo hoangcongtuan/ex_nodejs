@@ -2,7 +2,8 @@ var express = require('express')
 var app = express()
 var path = require('path')
 var bodyParser = require('body-parser')
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080
+const  ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'
 
 //create application parser
 var urlendcodedParser = bodyParser.urlencoded({extended: false})
@@ -63,7 +64,7 @@ app.get('/list_user', (req, res) => {
     res.send('Here is list user')
 })
 
-var server = app.listen(PORT, () => {
+var server = app.listen(PORT, ip, () => {
     var host = server.address().address
    var port = server.address().port
 
